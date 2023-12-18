@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import dookieLogo from "/src/assets/dookie.svg";
+import dookieLogo from "/src/assets/dookie.png";
+import dookieLogoMobile from "/src/assets/dookie-mobile.png";
 import HamburgerToggle from "/src/assets/hamburger-toggle.png";
 
 const HeaderContainer = styled.header`
@@ -13,14 +14,23 @@ const HeaderContainer = styled.header`
   border-bottom: 2px solid #1f1f1f;
 `;
 
-const Logo = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
+const Logo = styled.img`
   cursor: pointer;
+  width: 20.7rem;
+  height: 6rem;
+  background: url(${dookieLogo}) no-repeat;
+
+  @media (max-width: 768px) {
+    width: 7.3rem;
+    height: 2.1rem;
+    background: url(${dookieLogoMobile}) no-repeat;
+  }
 `;
 
 const MenuContainer = styled.nav`
   display: flex;
+  align-items: center;
+
   gap: 1rem;
 
   transition: all 0.3s ease-in-out;
@@ -63,11 +73,11 @@ const HamburgerIcon = styled.span`
   @media (max-width: 768px) {
     display: inline-block;
     cursor: pointer;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     background-size: contain;
     position: absolute;
-    top: 5%;
+    top: 3%;
     right: 10%;
     z-index: 5;
   }
@@ -82,9 +92,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <Logo>
-        <img src={dookieLogo} alt="dookie logo" />
-      </Logo>
+      <Logo />
       <MenuContainer>
         <MenuItem to="home" smooth={true} duration={500}>
           Home

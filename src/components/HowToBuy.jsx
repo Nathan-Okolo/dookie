@@ -119,7 +119,7 @@ const ColumnData = styled.div`
   gap: 1.5rem;
 `;
 
-const CellData = styled.p`
+const CellData = styled.div`
   ${(props) =>
     props.order &&
     css`
