@@ -1,12 +1,12 @@
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
+import Header from "./components/Header";
 import HowToBuy from "./components/HowToBuy";
 import Tokenomics from "./components/Tokenomics";
 
 function App() {
   return (
     <>
-      <Hero />
+      <Header />
       <Tokenomics />
       <HowToBuy />
       <Footer />

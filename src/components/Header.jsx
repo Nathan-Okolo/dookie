@@ -1,143 +1,114 @@
-import { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
-import dookieLogo from "/src/assets/dookie.png";
-import HamburgerToggle from "/src/assets/hamburger-toggle.png";
+import gridLines from "/src/assets/grid-lines.png";
+import gridLinesMobile from "/src/assets/grid-lines-mobile.png";
+import Navigation from "./Navigation";
+import goldenTurd from "/src/assets/golden-turd.png";
+import WidthContainer from "./WidthContainer";
 
-const HeaderContainer = styled.header`
-  display: flex;
-  justify-content: space-between;
+const StyledHeader = styled.section`
+  color: #1f1f1f;
+  background: url(${gridLines}) center/cover;
+
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
   align-items: center;
-  padding: 1rem;
-
-  border-bottom: 2px solid #1f1f1f;
-`;
-
-const Logo = styled.img`
-  &[src] {
-    alt: "dookie logo"; // Hide alt text for images with a valid source
-    border: none; // Remove border
-    outline: none; // Remove focus outline
-  }
-
-  cursor: pointer;
-  width: 20.7rem;
-  height: 6rem;
+  justify-content: center;
 
   @media (max-width: 768px) {
-    width: 7.3rem;
-    height: 2.1rem;
+    background: url(${gridLinesMobile}) center/cover;
+    height: 100%;
   }
 `;
 
-const MenuContainer = styled.nav`
+const Row = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+  }
+`;
+
+const Column = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
 
-  gap: 1rem;
+  @media (max-width: 768px) {
+    width: 94%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+`;
 
+const Img = styled.img`
+  width: 100%;
+  height: auto;
+
+  @media (max-width: 768px) {
+    transform: translateY(-2rem);
+  }
+`;
+
+const Button = styled.button`
+  font-size: inherit;
+  font-family: inherit;
+  color: #ba7043;
+  padding: 1rem 4rem;
+  border: 3px solid #ba7043;
+  border-radius: 2rem;
   transition: all 0.3s ease-in-out;
 
-  @media (max-width: 768px) {
-    display: none; // Hide on mobile initially
-    flex-direction: column;
-    background-color: #ffe2bd;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    width: 60%;
-    height: 100%;
-    padding-left: 2rem;
-    padding-top: 10rem;
-    transition: all 0.3s ease-in-out;
-  }
-`;
-
-const MenuItem = styled(Link)`
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s;
-
   &:hover {
-    background-color: #ffe2bd;
+    opacity: 0.8;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 4px #1f1f1f;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 2px #1f1f1f;
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 2rem;
   }
 `;
 
-const HamburgerIcon = styled.span`
-  display: none;
-  background: url(${HamburgerToggle}) no-repeat;
-
-  @media (max-width: 768px) {
-    display: inline-block;
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    background-size: contain;
-    position: absolute;
-    top: 1.8%;
-    right: 10%;
-    z-index: 5;
-  }
+const StyledLink = styled.a`
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
 `;
 
-const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
+function Header() {
   return (
-    <HeaderContainer>
-      <Logo src={dookieLogo} />
-      <MenuContainer>
-        <MenuItem to="home" smooth={true} duration={500}>
-          Home
-        </MenuItem>
-        <MenuItem to="tokenomics" smooth={true} duration={500}>
-          Tokenomics
-        </MenuItem>
-        <MenuItem to="how-to-buy" smooth={true} duration={500}>
-          How to Buy
-        </MenuItem>
-      </MenuContainer>
-      <HamburgerIcon onClick={toggleMenu} />
-      {isMenuOpen && (
-        <MenuContainer style={isMenuOpen && { display: "flex" }}>
-          <MenuItem
-            onClick={() => setMenuOpen(false)}
-            to="home"
-            smooth={true}
-            duration={500}
-          >
-            Home
-          </MenuItem>
-          <MenuItem
-            onClick={() => setMenuOpen(false)}
-            to="tokenomics"
-            smooth={true}
-            duration={500}
-          >
-            Tokenomics
-          </MenuItem>
-          <MenuItem
-            onClick={() => setMenuOpen(false)}
-            to="how-to-buy"
-            smooth={true}
-            duration={500}
-          >
-            How to Buy
-          </MenuItem>
-        </MenuContainer>
-      )}
-    </HeaderContainer>
+    <WidthContainer>
+      <StyledHeader id="home">
+        <Navigation />
+        <Row>
+          <Column>
+            <p>
+              Dookie is the embodiment of life’s messy bits, laughing in the
+              face of the “unmentionables,” and spreading joy with every
+              hilarious, nonsensical move
+            </p>
+            <Button type="button">
+              <StyledLink>buy now</StyledLink>
+            </Button>
+          </Column>
+          <Img src={goldenTurd} alt="golden turd" />
+        </Row>
+      </StyledHeader>
+    </WidthContainer>
   );
-};
+}
 
 export default Header;
