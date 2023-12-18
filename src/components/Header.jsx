@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import dookieLogo from "/src/assets/dookie.png";
-import dookieLogoMobile from "/src/assets/dookie-mobile.png";
 import HamburgerToggle from "/src/assets/hamburger-toggle.png";
 
 const HeaderContainer = styled.header`

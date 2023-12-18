@@ -59,14 +59,33 @@ const Button = styled.button`
   font-size: inherit;
   font-family: inherit;
   color: #ba7043;
-  padding: 1rem 3rem;
+  padding: 1rem 4rem;
   border: 3px solid #ba7043;
   border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 4px #1f1f1f;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 2px #1f1f1f;
+  }
 
   @media (max-width: 768px) {
     padding: 1rem 2rem;
     font-size: 2rem;
   }
+`;
+
+const StyledLink = styled.a`
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
 `;
 
 function Hero() {
@@ -81,7 +100,9 @@ function Hero() {
               face of the “unmentionables,” and spreading joy with every
               hilarious, nonsensical move
             </p>
-            <Button type="button">buy now</Button>
+            <Button type="button">
+              <StyledLink>buy now</StyledLink>
+            </Button>
           </Column>
           <Img src={goldenTurd} alt="golden turd" />
         </Row>
