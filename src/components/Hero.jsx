@@ -49,6 +49,10 @@ const Column = styled.div`
 const Img = styled.img`
   width: 100%;
   height: auto;
+
+  @media (max-width: 768px) {
+    transform: translateY(-2rem);
+  }
 `;
 
 const Button = styled.button`

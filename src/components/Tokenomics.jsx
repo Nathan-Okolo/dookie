@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import wavyRectangle from "/src/assets/wavy-rectangle.png";
 import wavyRectangleMobile from "/src/assets/wavy-rectangle-mobile.png";
-import doubleLines from "/src/assets/double-lines.png";
+import DoubleLineIcons from "./DoubleLineIcons";
 import WidthContainer from "./WidthContainer";
 import piechart from "/src/assets/piechart.png";
 import StyledText from "./StyledText";
@@ -15,9 +15,9 @@ const TokenomicsContainer = styled.div`
 
   @media (max-width: 768px) {
     background: url(${wavyRectangleMobile}) no-repeat top/cover;
-    height: 100vh;
+    height: 90vh;
     margin-top: -38%;
-    padding-top: 35%;
+    padding-top: 43%;
   }
 `;
 
@@ -39,18 +39,8 @@ const TokenomicsRow = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     margin: 3rem auto;
-    gap: 2rem;
+    gap: 3rem;
     width: 100%;
-  }
-`;
-
-const DoubleLineIcons = styled.img`
-  background: url(${doubleLines}) no-repeat;
-  width: 10rem;
-  padding: 1rem;
-
-  @media (max-width: 768px) {
-    width: 4rem;
   }
 `;
 
@@ -65,7 +55,7 @@ const Img = styled.img`
 
   @media (max-width: 768px) {
     order: -1;
-    width: 60%;
+    width: 65%;
   }
 `;
 

@@ -15,15 +15,19 @@ const HeaderContainer = styled.header`
 `;
 
 const Logo = styled.img`
+  &[src] {
+    alt: "dookie logo"; // Hide alt text for images with a valid source
+    border: none; // Remove border
+    outline: none; // Remove focus outline
+  }
+
   cursor: pointer;
   width: 20.7rem;
   height: 6rem;
-  background: url(${dookieLogo}) no-repeat;
 
   @media (max-width: 768px) {
     width: 7.3rem;
     height: 2.1rem;
-    background: url(${dookieLogoMobile}) no-repeat;
   }
 `;
 
@@ -77,7 +81,7 @@ const HamburgerIcon = styled.span`
     height: 2rem;
     background-size: contain;
     position: absolute;
-    top: 3%;
+    top: 1.8%;
     right: 10%;
     z-index: 5;
   }
@@ -92,7 +96,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <Logo />
+      <Logo src={dookieLogo} />
       <MenuContainer>
         <MenuItem to="home" smooth={true} duration={500}>
           Home

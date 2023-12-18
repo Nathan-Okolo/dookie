@@ -15,7 +15,8 @@ const HowToBuyContainer = styled.section`
   margin-bottom: 5rem;
 
   @media (max-width: 768px) {
-    margin-top: 20%;
+    height: max-content;
+    margin-top: 5%;
     margin-bottom: -3rem;
   }
 `;
