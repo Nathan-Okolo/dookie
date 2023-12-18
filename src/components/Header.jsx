@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 import dookieLogo from "/src/assets/dookie.svg";
 import HamburgerToggle from "/src/assets/hamburger-toggle.png";
 
@@ -40,7 +41,7 @@ const MenuContainer = styled.nav`
   }
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled(Link)`
   cursor: pointer;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -85,16 +86,43 @@ const Header = () => {
         <img src={dookieLogo} alt="dookie logo" />
       </Logo>
       <MenuContainer>
-        <MenuItem>Home</MenuItem>
-        <MenuItem>Tokenomics</MenuItem>
-        <MenuItem>How to Buy</MenuItem>
+        <MenuItem to="home" smooth={true} duration={500}>
+          Home
+        </MenuItem>
+        <MenuItem to="tokenomics" smooth={true} duration={500}>
+          Tokenomics
+        </MenuItem>
+        <MenuItem to="how-to-buy" smooth={true} duration={500}>
+          How to Buy
+        </MenuItem>
       </MenuContainer>
       <HamburgerIcon onClick={toggleMenu} />
       {isMenuOpen && (
         <MenuContainer style={isMenuOpen && { display: "flex" }}>
-          <MenuItem>Home</MenuItem>
-          <MenuItem>Tokenomics</MenuItem>
-          <MenuItem>How to Buy</MenuItem>
+          <MenuItem
+            onClick={() => setMenuOpen(false)}
+            to="home"
+            smooth={true}
+            duration={500}
+          >
+            Home
+          </MenuItem>
+          <MenuItem
+            onClick={() => setMenuOpen(false)}
+            to="tokenomics"
+            smooth={true}
+            duration={500}
+          >
+            Tokenomics
+          </MenuItem>
+          <MenuItem
+            onClick={() => setMenuOpen(false)}
+            to="how-to-buy"
+            smooth={true}
+            duration={500}
+          >
+            How to Buy
+          </MenuItem>
         </MenuContainer>
       )}
     </HeaderContainer>

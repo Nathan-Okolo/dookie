@@ -71,7 +71,7 @@ const Img = styled.img`
 
 function Tokenomics() {
   return (
-    <section>
+    <section id="tokenomics">
       <TokenomicsContainer>
         <WidthContainer>
           <Row>

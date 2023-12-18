@@ -5,7 +5,7 @@ import Header from "./Header";
 import goldenTurd from "/src/assets/golden-turd.png";
 import WidthContainer from "./WidthContainer";
 
-const StyledHero = styled.div`
+const StyledHero = styled.section`
   color: #1f1f1f;
   background: url(${gridLines}) center/cover;
 
@@ -67,7 +67,7 @@ const Button = styled.button`
 
 function Hero() {
   return (
-    <StyledHero>
+    <StyledHero id="home">
       <WidthContainer>
         <Header />
         <Row>

@@ -5,12 +5,12 @@ import Tokenomics from "./components/Tokenomics";
 
 function App() {
   return (
-    <div>
+    <>
       <Hero />
       <Tokenomics />
       <HowToBuy />
       <Footer />
-    </div>
+    </>
   );
 }
 
