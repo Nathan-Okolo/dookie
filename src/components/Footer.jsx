@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
   text-align: center;
   background-color: #ba7043;
   color: #ffffff;

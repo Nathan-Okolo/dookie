@@ -6,7 +6,7 @@ import goldenTurd from "/src/assets/golden-turd.png";
 import WidthContainer from "./WidthContainer";
 import StyledText from "./StyledText";
 
-const StyledHeader = styled.section`
+const StyledHeader = styled.header`
   color: #1f1f1f;
   background: url(${gridLines}) center/cover;
 

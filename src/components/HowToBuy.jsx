@@ -17,7 +17,6 @@ const HowToBuyContainer = styled.section`
 
   @media (max-width: 768px) {
     height: max-content;
-    padding-top: 10%;
     margin-bottom: -3rem;
   }
 `;

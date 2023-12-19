@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import dookieLogo from "/src/assets/dookie.png";
 import HamburgerToggle from "/src/assets/hamburger-toggle.png";
 
-const NavContainer = styled.header`
+const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
