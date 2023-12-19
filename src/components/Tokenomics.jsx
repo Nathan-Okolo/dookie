@@ -7,10 +7,11 @@ import StyledText from "./StyledText";
 import WidthContainer from "./WidthContainer";
 
 const TokenomicsContainer = styled.section`
-  padding-top: 3rem;
-  margin-bottom: 15rem;
+  padding-top: 5rem;
+  margin-bottom: 20rem;
 
   @media (max-width: 768px) {
+    padding-top: 3rem;
     margin-bottom: 10rem;
   }
 
@@ -60,9 +61,11 @@ const Head = styled.div`
 `;
 
 const Body = styled.div`
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5rem;
 
   @media (max-width: 768px) {
@@ -83,7 +86,9 @@ const ColumnData = styled.div`
 `;
 
 const CenterText = styled.p`
-  align-self: center;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
 `;
 
 const Img = styled.img`

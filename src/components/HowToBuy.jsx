@@ -13,7 +13,7 @@ import leftPoint from "/src/assets/left-point.png";
 
 const HowToBuyContainer = styled.section`
   margin-bottom: 5rem;
-  padding-top: 2%;
+  padding-top: 5%;
 
   @media (max-width: 768px) {
     height: max-content;

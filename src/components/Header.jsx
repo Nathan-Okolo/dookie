@@ -4,6 +4,7 @@ import gridLinesMobile from "/src/assets/grid-lines-mobile.png";
 import Navigation from "./Navigation";
 import goldenTurd from "/src/assets/golden-turd.png";
 import WidthContainer from "./WidthContainer";
+import StyledText from "./StyledText";
 
 const StyledHeader = styled.section`
   color: #1f1f1f;
@@ -37,6 +38,7 @@ const Column = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
+  width: 110%;
 
   @media (max-width: 768px) {
     width: 94%;
@@ -61,7 +63,7 @@ const Button = styled.button`
   color: #ba7043;
   padding: 1rem 4rem;
   border: 3px solid #ba7043;
-  border-radius: 2rem;
+  border-radius: 3rem;
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -95,11 +97,14 @@ function Header() {
         <Navigation />
         <Row>
           <Column>
-            <p>
+            <StyledText color="#1f1f1f" type="text">
               Dookie is the embodiment of life’s messy bits, laughing in the
-              face of the “unmentionables,” and spreading joy with every
-              hilarious, nonsensical move
-            </p>
+              face of the{" "}
+              <StyledText background="#ffe2bd" color="#1f1f1f" type="text">
+                “unmentionables,”
+              </StyledText>{" "}
+              and spreading joy with every hilarious, nonsensical move
+            </StyledText>
             <Button type="button">
               <StyledLink>buy now</StyledLink>
             </Button>

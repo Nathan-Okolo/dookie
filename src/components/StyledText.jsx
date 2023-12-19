@@ -18,7 +18,16 @@ const StyledText = styled.span`
   ${(props) =>
     props.type === "text" &&
     css`
+      font-size: 3.2rem;
+      line-height: 3.283rem;
+      text-transform: none;
       font-weight: 400;
+    `};
+
+  ${(props) =>
+    props.background &&
+    css`
+      background-color: ${props.background};
     `};
 
   ${(props) =>
