@@ -36,7 +36,7 @@ const TokenomicsBackground = styled.div`
 
   @media (max-width: 400px) {
     background: url(${wavyRectangleMobile}) no-repeat top/contain;
-    top: 60%;
+    top: 62%;
     height: 110vh;
     width: 100vw;
   }
