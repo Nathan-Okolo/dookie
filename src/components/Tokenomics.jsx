@@ -8,7 +8,7 @@ import WidthContainer from "./WidthContainer";
 
 const TokenomicsContainer = styled.section`
   width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   height: 70rem;
   position: relative;
 
@@ -30,7 +30,7 @@ const TokenomicsBackground = styled.div`
   position: absolute;
   z-index: -5;
 
-  transform: translateY(-25rem);
+  transform: translateY(-22rem);
 
   display: flex;
   align-items: center;
