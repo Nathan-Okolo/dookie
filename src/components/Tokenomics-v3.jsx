@@ -8,8 +8,7 @@ import WidthContainer from "./WidthContainer";
 
 const TokenomicsContainer = styled.section`
   width: 100%;
-  min-height: 90vh;
-  height: 70rem;
+  height: 90vh;
   position: relative;
 
   @media (max-width: 768px) {
@@ -23,14 +22,13 @@ const TokenomicsContainer = styled.section`
 `;
 
 const TokenomicsBackground = styled.div`
-  background: url(${wavyRectangle}) no-repeat top/cover;
-  min-height: 110vh;
-  height: 95rem;
+  background: url(${wavyRectangle}) no-repeat center/cover;
+  height: 110vh;
   width: 100%;
   position: absolute;
   z-index: -5;
 
-  transform: translateY(-22%);
+  transform: translateY(-20%);
 
   display: flex;
   align-items: center;
@@ -52,10 +50,8 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   gap: 6rem;
-  padding-top: 5rem;
 
   @media (max-width: 768px) {
-    padding-top: 0rem;
     gap: 4rem;
   }
 `;
@@ -106,51 +102,53 @@ const Img = styled.img`
 function Tokenomics() {
   return (
     <TokenomicsContainer id="tokenomics">
-      <TokenomicsBackground />
-      <WidthContainer>
-        <Content>
-          <Head>
-            <DoubleLineIcons />
-            <p>
-              <StyledText type="heading" font="Fredoka, sans-serif">
-                token
-              </StyledText>
-              <StyledText
-                type="heading"
-                font="Fredoka, sans-serif"
-                color="#1F1F1F"
-              >
-                omics
-              </StyledText>
-            </p>
-            <DoubleLineIcons />
-          </Head>
-          <Body>
-            <ColumnData>
-              <CenterText>Total Supply:</CenterText>
-              <StyledText type="text">69 Trillion $DOOKIE</StyledText>
-            </ColumnData>
-            <Img src={piechart} alt="piechart" />
-            <ColumnData>
+      <TokenomicsBackground>
+        <WidthContainer>
+          <Content>
+            <Head>
+              <DoubleLineIcons />
               <p>
-                <StyledText type="text">50%</StyledText> <span> - Airdrop</span>
+                <StyledText type="heading" font="Fredoka, sans-serif">
+                  token
+                </StyledText>
+                <StyledText
+                  type="heading"
+                  font="Fredoka, sans-serif"
+                  color="#1F1F1F"
+                >
+                  omics
+                </StyledText>
               </p>
-              <p>
-                <StyledText type="text">20%</StyledText>{" "}
-                <span> - Marketing</span>
-              </p>
-              <p>
-                <StyledText type="text">20%</StyledText>
-                <span> - Contributors</span>
-              </p>
-              <p>
-                <StyledText type="text">10%</StyledText>{" "}
-                <span> - Liquidity</span>
-              </p>
-            </ColumnData>
-          </Body>
-        </Content>
-      </WidthContainer>
+              <DoubleLineIcons />
+            </Head>
+            <Body>
+              <ColumnData>
+                <CenterText>Total Supply:</CenterText>
+                <StyledText type="text">69 Trillion $DOOKIE</StyledText>
+              </ColumnData>
+              <Img src={piechart} alt="piechart" />
+              <ColumnData>
+                <p>
+                  <StyledText type="text">50%</StyledText>{" "}
+                  <span> - Airdrop</span>
+                </p>
+                <p>
+                  <StyledText type="text">20%</StyledText>{" "}
+                  <span> - Marketing</span>
+                </p>
+                <p>
+                  <StyledText type="text">20%</StyledText>
+                  <span> - Contributors</span>
+                </p>
+                <p>
+                  <StyledText type="text">10%</StyledText>{" "}
+                  <span> - Liquidity</span>
+                </p>
+              </ColumnData>
+            </Body>
+          </Content>
+        </WidthContainer>
+      </TokenomicsBackground>
     </TokenomicsContainer>
   );
 }
