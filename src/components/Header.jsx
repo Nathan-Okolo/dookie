@@ -10,7 +10,6 @@ const StyledHeader = styled.header`
   color: #1f1f1f;
   background: url(${gridLines}) center/cover;
 
-  height: 100vh;
   width: 100%;
   margin: 0 auto;
   align-items: center;
