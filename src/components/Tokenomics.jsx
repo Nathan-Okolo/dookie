@@ -14,7 +14,7 @@ const TokenomicsContainer = styled.section`
 
   @media (max-width: 768px) {
     padding-top: 10%;
-    height: 75vh;
+    min-height: 75vh;
   }
 
   @media (max-width: 400px) {
@@ -38,6 +38,7 @@ const TokenomicsBackground = styled.div`
 
   @media (max-width: 768px) {
     background: url(${wavyRectangleMobile}) no-repeat top/contain;
+    transform: translateY(-15%);
     height: 85vh;
   }
 
