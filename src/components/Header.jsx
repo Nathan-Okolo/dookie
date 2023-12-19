@@ -90,8 +90,8 @@ const StyledLink = styled.a`
 
 function Header() {
   return (
-    <WidthContainer>
-      <StyledHeader id="home">
+    <StyledHeader id="home">
+      <WidthContainer>
         <Navigation />
         <Row>
           <Column>
@@ -106,8 +106,8 @@ function Header() {
           </Column>
           <Img src={goldenTurd} alt="golden turd" />
         </Row>
-      </StyledHeader>
-    </WidthContainer>
+      </WidthContainer>
+    </StyledHeader>
   );
 }
 
