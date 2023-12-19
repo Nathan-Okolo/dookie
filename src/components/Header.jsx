@@ -24,6 +24,7 @@ const StyledHeader = styled.header`
 const Row = styled.div`
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -36,10 +37,13 @@ const Column = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  transform: translateY(-10rem);
   gap: 2rem;
   width: 110%;
 
   @media (max-width: 768px) {
+    transform: translateY(0);
     width: 94%;
     margin: 0 auto;
     text-align: center;
@@ -50,6 +54,7 @@ const Column = styled.div`
 const Img = styled.img`
   width: 100%;
   height: auto;
+  transform: translateY(-5rem);
 
   @media (max-width: 768px) {
     transform: translateY(-2rem);
