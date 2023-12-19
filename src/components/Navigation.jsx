@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import dookieLogo from "/src/assets/dookie.png";
@@ -86,9 +86,18 @@ const HamburgerIcon = styled.span`
 
 const Navigation = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [clicked, setClicked] = useState(false);
+
+  useEffect(() => {
+    if (clicked) {
+      document.body.style.height = isMenuOpen ? "100vh" : "auto";
+      document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    }
+  }, [clicked, isMenuOpen]);
 
   const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+    setMenuOpen((menu) => !menu);
+    setClicked(true);
   };
 
   return (
