@@ -11,6 +11,10 @@ const NavContainer = styled.header`
   padding: 1rem;
 
   border-bottom: 2px solid #1f1f1f;
+
+  @media (max-width: 768px) {
+    height: 6rem;
+  }
 `;
 
 const Logo = styled.img`
@@ -78,7 +82,7 @@ const HamburgerIcon = styled.span`
     height: 2rem;
     background-size: contain;
     position: absolute;
-    top: 1.8%;
+    top: 2.8%;
     right: 10%;
     z-index: 5;
   }
