@@ -30,7 +30,7 @@ const TokenomicsBackground = styled.div`
   position: absolute;
   z-index: -5;
 
-  transform: translateY(-22%);
+  transform: translateY(-20rem);
 
   display: flex;
   align-items: center;
