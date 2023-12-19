@@ -6,29 +6,38 @@ import WidthContainer from "./WidthContainer";
 import piechart from "/src/assets/piechart.png";
 import StyledText from "./StyledText";
 
-const TokenomicsContainer = styled.div`
-  background: url(${wavyRectangle}) no-repeat center/contain;
-  margin-top: -18%;
-  padding-top: 18%;
-  height: 120vh;
+const TokenomicsContainer = styled.section`
+  background: url(${wavyRectangle}) no-repeat top/cover;
+  margin-top: -15%;
+  padding-top: 10%;
+  height: 110vh;
   width: 100%;
 
   @media (max-width: 768px) {
     background: url(${wavyRectangleMobile}) no-repeat top/cover;
-    height: 90vh;
-    margin-top: -38%;
-    padding-top: 43%;
+    height: 85vh;
+    margin-top: -35%;
+    padding-top: 25%;
+  }
+
+  @media (max-width: 400px) {
+    height: 110vh;
   }
 `;
 
-const Row = styled.div`
+const TokenomicsMainContainer = styled.div`
+  padding-top: 8%;
+  width: 100%;
+`;
+
+const HeadingRow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 `;
 
-const TokenomicsRow = styled.div`
+const TokenomicsContentRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,9 +48,15 @@ const TokenomicsRow = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     margin: 3rem auto;
-    gap: 3rem;
+    gap: 2.5rem;
     width: 100%;
   }
+`;
+
+const DataRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 `;
 
 const CenterHeading = styled.p`
@@ -61,10 +76,10 @@ const Img = styled.img`
 
 function Tokenomics() {
   return (
-    <section id="tokenomics">
-      <TokenomicsContainer>
-        <WidthContainer>
-          <Row>
+    <TokenomicsContainer>
+      <WidthContainer>
+        <TokenomicsMainContainer id="tokenomics">
+          <HeadingRow>
             <DoubleLineIcons />
             <div>
               <StyledText font="Fredoka, sans-serif" color="#BA7043">
@@ -75,31 +90,36 @@ function Tokenomics() {
               </StyledText>
             </div>
             <DoubleLineIcons />
-          </Row>
-          <TokenomicsRow>
-            <div className="tokenomics-row">
+          </HeadingRow>
+          <TokenomicsContentRow>
+            <DataRow className="tokenomics-row">
               <CenterHeading>Total Supply:</CenterHeading>
-              <StyledText color="#BA7043">69 Trillion $Dookie</StyledText>
-            </div>
+              <StyledText type="text" color="#BA7043">
+                69 Trillion $Dookie
+              </StyledText>
+            </DataRow>
             <Img src={piechart} alt="piechart" />
-            <div>
+            <DataRow>
               <p>
-                <StyledText>50%</StyledText> - <span>Airdrop</span>
+                <StyledText type="text">50%</StyledText> - <span>Airdrop</span>
               </p>
               <p>
-                <StyledText>20%</StyledText> - <span>Marketing</span>
+                <StyledText type="text">20%</StyledText> -{" "}
+                <span>Marketing</span>
               </p>
               <p>
-                <StyledText>20%</StyledText> - <span>Contributors</span>
+                <StyledText type="text">20%</StyledText> -{" "}
+                <span>Contributors</span>
               </p>
               <p>
-                <StyledText>10%</StyledText> - <span>Liquidity</span>
+                <StyledText type="text">10%</StyledText> -{" "}
+                <span>Liquidity</span>
               </p>
-            </div>
-          </TokenomicsRow>
-        </WidthContainer>
-      </TokenomicsContainer>
-    </section>
+            </DataRow>
+          </TokenomicsContentRow>
+        </TokenomicsMainContainer>
+      </WidthContainer>
+    </TokenomicsContainer>
   );
 }
 

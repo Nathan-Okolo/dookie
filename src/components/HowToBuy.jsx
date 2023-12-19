@@ -13,10 +13,11 @@ import leftPoint from "/src/assets/left-point.png";
 
 const HowToBuyContainer = styled.section`
   margin-bottom: 5rem;
+  padding-top: 2%;
 
   @media (max-width: 768px) {
     height: max-content;
-    margin-top: 10%;
+    padding-top: 10%;
     margin-bottom: -3rem;
   }
 `;
@@ -132,8 +133,8 @@ const CellData = styled.div`
 
 function HowToBuy() {
   return (
-    <WidthContainer>
-      <HowToBuyContainer id="how-to-buy">
+    <HowToBuyContainer id="how-to-buy">
+      <WidthContainer>
         <HowToBuyHeadingContainer>
           <DoubleLineIcons />
           <StyledText color="#1F1F1F" font="Fredoka, sans-serif">
@@ -149,7 +150,7 @@ function HowToBuy() {
             <Column>
               <Icon type="poop" src={poop1} />
               <ColumnData>
-                <StyledText>create wallet</StyledText>
+                <StyledText type="text">create wallet</StyledText>
                 <p>
                   Download Phantom wallet or your wallet of choice from the App
                   Store or Google Play store for free
@@ -172,7 +173,7 @@ function HowToBuy() {
               <Column>
                 <Icon type="poop" src={poop2} />
                 <ColumnData>
-                  <StyledText>Get $sol</StyledText>
+                  <StyledText type="text">Get $sol</StyledText>
                   <p>
                     If you don’t have any SOL, you can buy directly on Phantom
                     wallet, transfer from another wallet, or buy on another
@@ -198,7 +199,7 @@ function HowToBuy() {
             <Column>
               <Icon type="poop" src={poop3} />
               <ColumnData>
-                <StyledText>Exchange for $DOOKIE</StyledText>
+                <StyledText type="text">Exchange for $DOOKIE</StyledText>
                 <p>Trade $SOL for $DOOKIE on the following exchanges...</p>
               </ColumnData>
             </Column>
@@ -213,91 +214,9 @@ function HowToBuy() {
             </Column>
           </Row>
         </Rows>
-      </HowToBuyContainer>
-    </WidthContainer>
+      </WidthContainer>
+    </HowToBuyContainer>
   );
 }
 
 export default HowToBuy;
-
-{
-  /* <HowToBuyRow>
-          <HowToBuyColumn>
-            <HowToBuyIcon url={poop1} />
-            <HowToBuyCombo>
-              <StyledText>create wallet</StyledText>
-              <p>
-                Download Phantom wallet or your wallet of choice from the App
-                Store or Google Play store for free
-              </p>
-            </HowToBuyCombo>
-          </HowToBuyColumn>
-          <HowToBuyColumn>
-            <HowToBuyIcon url={rightPoint} />
-            <HowToBuyIcon url={dookie1} />
-          </HowToBuyColumn>
-        </HowToBuyRow>
-
-        
-        <HowToBuyRow>
-          <HowToBuyColumn>
-            <HowToBuyIcon url={dookie2} />
-            <HowToBuyIcon url={leftPoint} />
-          </HowToBuyColumn>
-          <HowToBuyColumn>
-            <HowToBuyIcon url={poop2} />
-            <HowToBuyCombo>
-              <StyledText>Get $sol</StyledText>
-              <p>
-                If you don’t have any SOL, you can buy directly on Phantom
-                wallet, transfer from another wallet, or buy on another exchange
-                and send it to your wallet
-              </p>
-            </HowToBuyCombo>
-          </HowToBuyColumn>
-        </HowToBuyRow>
-
-   
-        <HowToBuyRow>
-          <HowToBuyColumn>
-            <HowToBuyIcon url={poop3} />
-            <HowToBuyCombo>
-              <StyledText>Exchange for $DOOKIE</StyledText>
-              <p>Trade $SOL for $DOOKIE on the following exchanges...</p>
-            </HowToBuyCombo>
-          </HowToBuyColumn>
-          <HowToBuyColumn>
-            <HowToBuyIcon url={dookie3} />
-          </HowToBuyColumn>
-        </HowToBuyRow> */
-}
-// const HowToBuyColumn = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-// `;
-
-// const HowToBuyCombo = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 2rem;
-// `;
-
-// const HowToBuyCell = styled.div`
-//   ${(props) =>
-//     props.start && `align-self: ${props.start}, justify-self: ${props.start};`}
-//   ${(props) =>
-//     props.end && `align-self: ${props.end}, justify-self: ${props.end};`}
-//   ${(props) =>
-//     props.center &&
-//     `align-self: ${props.center}, justify-self: ${props.center};`}
-
-//   align-self: flex-end;
-//   justify-self: flex-end;
-// `;
-
-// const HowToBuyIcon = styled.img`
-//   ${(props) => props.url && `background: url(${props.url}) no-repeat;`}
-//   width: 100%;
-//   height: 100%;
-// `;
