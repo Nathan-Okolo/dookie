@@ -56,10 +56,10 @@ const MenuItem = styled(Link)`
   cursor: pointer;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: color 0.2s;
 
   &:hover {
-    background-color: #ffe2bd;
+    color: #ba7043;
   }
 
   @media (max-width: 768px) {
