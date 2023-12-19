@@ -13,6 +13,10 @@ const TokenomicsContainer = styled.section`
   @media (max-width: 768px) {
     margin-bottom: 10rem;
   }
+
+  @media (max-width: 400px) {
+    margin-bottom: 5rem;
+  }
 `;
 
 const TokenomicsBackground = styled.div`
@@ -28,6 +32,13 @@ const TokenomicsBackground = styled.div`
     background: url(${wavyRectangleMobile}) no-repeat top/contain;
     top: 55%;
     height: 85vh;
+  }
+
+  @media (max-width: 400px) {
+    background: url(${wavyRectangleMobile}) no-repeat top/contain;
+    top: 70%;
+    height: 110vh;
+    width: 100vw;
   }
 `;
 
