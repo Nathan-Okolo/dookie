@@ -8,12 +8,18 @@ const StyledText = styled.span`
 
   @media (max-width: 768px) {
     font-size: 2.4rem;
-    line-height: 2.052rem;
+    line-height: 2.462rem;
   }
 
   ${(props) => `color: ${props.color ? props.color : "#BA7043"};`}
 
   ${(props) => props.font && `font-family: ${props.font};`}
+
+  ${(props) =>
+    props.background &&
+    css`
+      background-color: ${props.background};
+    `};
 
   ${(props) =>
     props.type === "text" &&
@@ -22,12 +28,6 @@ const StyledText = styled.span`
       line-height: 3.283rem;
       text-transform: none;
       font-weight: 400;
-    `};
-
-  ${(props) =>
-    props.background &&
-    css`
-      background-color: ${props.background};
     `};
 
   ${(props) =>

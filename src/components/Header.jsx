@@ -44,7 +44,7 @@ const Column = styled.div`
 
   @media (max-width: 768px) {
     transform: translateY(0);
-    width: 94%;
+    width: 75%;
     margin: 0 auto;
     text-align: center;
     align-items: center;

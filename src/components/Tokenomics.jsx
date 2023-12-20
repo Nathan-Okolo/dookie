@@ -13,7 +13,6 @@ const TokenomicsContainer = styled.section`
   position: relative;
 
   @media (max-width: 768px) {
-    padding-top: 10%;
     min-height: 75vh;
   }
 
@@ -56,8 +55,8 @@ const Content = styled.div`
   padding-top: 5rem;
 
   @media (max-width: 768px) {
-    padding-top: 0rem;
-    gap: 4rem;
+    padding-top: 2rem;
+    gap: 1rem;
   }
 `;
 
@@ -78,7 +77,7 @@ const Body = styled.div`
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
   }
 `;
 
@@ -87,7 +86,7 @@ const ColumnData = styled.div`
   flex-direction: column;
 
   @media (max-width: 768px) {
-    gap: 0.6rem;
+    gap: 0.4rem;
   }
 `;
 

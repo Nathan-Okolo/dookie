@@ -16,9 +16,13 @@ const HowToBuyContainer = styled.section`
   padding-top: 5%;
 
   @media (max-width: 768px) {
-    padding-top: 15%;
+    padding-top: 5%;
     height: max-content;
     margin-bottom: -3rem;
+  }
+
+  @media (max-width: 380px) {
+    padding-top: 15%;
   }
 `;
 
@@ -119,6 +123,10 @@ const ColumnData = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
 `;
 
 const CellData = styled.div`
