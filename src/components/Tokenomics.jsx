@@ -56,7 +56,7 @@ const Content = styled.div`
 
   @media (max-width: 768px) {
     padding-top: 2rem;
-    gap: 1rem;
+    gap: 2rem;
   }
 `;
 
