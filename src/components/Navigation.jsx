@@ -27,8 +27,8 @@ const Logo = styled.img`
   height: 6rem;
 
   @media (max-width: 768px) {
-    width: 7.3rem;
-    height: 2.1rem;
+    width: 13rem;
+    height: 3rem;
   }
 `;
 

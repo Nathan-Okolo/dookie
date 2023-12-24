@@ -102,12 +102,7 @@ function Header() {
         <Row>
           <Column>
             <StyledText color="#1f1f1f" type="text">
-              Dookie is the embodiment of life’s messy bits, laughing in the
-              face of the{" "}
-              <StyledText background="#ffe2bd" color="#1f1f1f" type="text">
-                “unmentionables,”
-              </StyledText>{" "}
-              and spreading joy with every hilarious, nonsensical move
+              Everyone has a little Dookie in them
             </StyledText>
             <Button type="button">
               <StyledLink>buy now</StyledLink>
