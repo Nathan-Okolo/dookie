@@ -16,6 +16,8 @@ body {
   font-weight: 400;
   letter-spacing: 0.1rem;
   line-height: 3.283rem;
+  background-color: #FEF9E6;
+  ;
 }
 
 @media (max-width: 768px) {

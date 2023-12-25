@@ -31,6 +31,20 @@ const StyledText = styled.span`
     `};
 
   ${(props) =>
+    props.type === "texter" &&
+    css`
+      font-size: 5.2rem;
+      line-height: 5.583rem;
+      text-transform: none;
+      font-weight: 400;
+
+      @media (max-width: 768px) {
+        font-size: 3.4rem;
+        line-height: 3.462rem;
+      }
+    `};
+
+  ${(props) =>
     props.type === "heading" &&
     css`
       @media (max-width: 768px) {

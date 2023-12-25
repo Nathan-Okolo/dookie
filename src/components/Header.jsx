@@ -101,8 +101,10 @@ function Header() {
         <Navigation />
         <Row>
           <Column>
-            <StyledText color="#1f1f1f" type="text">
-              Everyone has a little Dookie in them
+            <StyledText color="#1f1f1f" type="texter">
+              Everyone has a little{" "}
+              <span style={{ backgroundColor: "#FFE2BD" }}> Dookie </span> in
+              them
             </StyledText>
             <Button type="button">
               <StyledLink>buy now</StyledLink>
