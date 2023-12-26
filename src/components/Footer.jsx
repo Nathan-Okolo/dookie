@@ -10,6 +10,7 @@ const FooterContainer = styled.footer`
   justify-content: space-between;
   align-items: center;
   
+  
 
   @media (max-width: 668px) {
   }
@@ -19,7 +20,7 @@ const StyledFooter = styled.div`
   padding-left: 96px;
   margin-left: 10px;
   &::before {
-    content: "Just Dookit 2023";
+    content: "Just Dookit";
   }
 
   @media (max-width: 668px) {
