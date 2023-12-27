@@ -39,7 +39,7 @@ const Img1 = styled.a`
   margin-right: 20px;
 
   @media (max-width: 668px) {
-    margin-right: 8px;
+    margin-right: 30px;
     display: flex;
   }
 `;
@@ -50,7 +50,7 @@ const Img2 = styled.a`
   margin-right: 150px;
 
   @media (max-width: 668px) {
-    margin-right: 20px;
+    margin-right: 30px;
   }
 `;
 
