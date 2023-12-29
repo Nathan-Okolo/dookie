@@ -59,7 +59,7 @@ function Footer() {
     <FooterContainer>
       <StyledFooter></StyledFooter>
       <Img1
-        href="https://x.com/Dookietheturd?t=_As87nlHtxhuFXkLoArl6Q&s=09"
+        href="https://x.com/Dookiethe3rd"
         target="_blank"
         rel="noopener noreferrer">
         <img src={twitter} alt="golden turd" />
