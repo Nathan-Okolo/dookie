@@ -107,7 +107,12 @@ function Header() {
               them
             </StyledText>
             <Button type="button">
-              <StyledLink>buy now</StyledLink>
+              <StyledLink
+                href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=E2Vvh3dXgZGbUf76d3wBJgwfWSZ3GjjakidnHR7sjdfC&inputAmount=0&fixed=in"
+                target="_blank"
+                rel="noopener noreferrer">
+                buy now
+              </StyledLink>
             </Button>
           </Column>
           <Img src={goldenTurd} alt="golden turd" />
