@@ -10,7 +10,7 @@ import dookie2 from "/src/assets/dookie-2.png";
 import dookie3 from "/src/assets/dookie-3.png";
 import rightPoint from "/src/assets/right-point.png";
 import leftPoint from "/src/assets/left-point.png";
-import ray from '/src/assets/Raydium.png'
+import ray from "/src/assets/Raydium.png";
 
 const HowToBuyContainer = styled.section`
   margin-bottom: 5rem;
@@ -27,7 +27,7 @@ const HowToBuyContainer = styled.section`
   }
 `;
 
-const HowToBuyHeadingContainer = styled.div` 
+const HowToBuyHeadingContainer = styled.div`
   margin-bottom: 5rem;
   display: flex;
   align-items: center;
@@ -221,9 +221,11 @@ function HowToBuy() {
                       style={{ marginLeft: "5px", verticalAlign: "middle" }}
                     />
                   </a>{" "}
+                  with Contract address
                 </p>
               </ColumnData>
             </Column>
+            <StyledText type="address">E2Vvh3dXgZGbUf76d3wBJgwfWSZ3GjjakidnHR7sjdfC</StyledText>
           </Row>
 
           <Row>

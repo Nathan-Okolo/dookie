@@ -65,7 +65,7 @@ function Footer() {
         <img src={twitter} alt="golden turd" />
       </Img1>
       <Img2
-        href="https://t.me/+LZ-0EB9F3u0xYTk0"
+        href="https://t.me/dookieportal"
         target="_blank"
         rel="noopener noreferrer">
         <img src={telegram} alt="golden turd" />

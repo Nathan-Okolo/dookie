@@ -31,6 +31,21 @@ const StyledText = styled.span`
     `};
 
   ${(props) =>
+    props.type === "address" &&
+    css`
+      font-size: 3.2rem;
+      line-height: 3.283rem;
+      text-transform: none;
+      font-weight: 400;
+
+      @media (max-width: 768px) {
+        font-size: 2rem; 
+        line-height: 1.2; 
+        word-break: break-word; 
+      }
+    `};
+
+  ${(props) =>
     props.type === "texter" &&
     css`
       font-size: 5.2rem;
