@@ -10,6 +10,7 @@ import dookie2 from "/src/assets/dookie-2.png";
 import dookie3 from "/src/assets/dookie-3.png";
 import rightPoint from "/src/assets/right-point.png";
 import leftPoint from "/src/assets/left-point.png";
+import ray from '/src/assets/Raydium.png'
 
 const HowToBuyContainer = styled.section`
   margin-bottom: 5rem;
@@ -26,7 +27,7 @@ const HowToBuyContainer = styled.section`
   }
 `;
 
-const HowToBuyHeadingContainer = styled.div`
+const HowToBuyHeadingContainer = styled.div` 
   margin-bottom: 5rem;
   display: flex;
   align-items: center;
@@ -208,7 +209,19 @@ function HowToBuy() {
               <Icon type="poop" src={poop3} />
               <ColumnData>
                 <StyledText type="text">Exchange for $DOOKIE</StyledText>
-                <p>Trade $SOL for $DOOKIE on the following exchanges...</p>
+                <p>
+                  Trade $SOL for $DOOKIE on{" "}
+                  <a
+                    href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=E2Vvh3dXgZGbUf76d3wBJgwfWSZ3GjjakidnHR7sjdfC&inputAmount=0&fixed=in"
+                    target="_blank">
+                    RAYDIUM.IO
+                    <img
+                      src={ray}
+                      alt="Raydium Logo"
+                      style={{ marginLeft: "5px", verticalAlign: "middle" }}
+                    />
+                  </a>{" "}
+                </p>
               </ColumnData>
             </Column>
           </Row>
